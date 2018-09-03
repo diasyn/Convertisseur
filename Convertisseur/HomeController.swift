@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeController.swift
 //  Convertisseur
 //
 //  Created by didier arrigoni on 03.09.18.
@@ -8,11 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeController: UIViewController {
 
-    @IBOutlet weak var deviseView: UIView!
-    @IBOutlet weak var distanceView: UIView!
-    @IBOutlet weak var temperatureView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,8 +21,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var buttonAction: UIButton!
-    
+
     /*
     // MARK: - Navigation
 
