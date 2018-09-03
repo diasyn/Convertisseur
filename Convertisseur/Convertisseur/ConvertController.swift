@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  ConvertController.swift
 //  Convertisseur
 //
 //  Created by didier arrigoni on 03.09.18.
@@ -8,7 +8,17 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class ConvertController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var entryView: UIView!
+    @IBOutlet weak var toDoLabel: UILabel!
+    @IBOutlet weak var dataTextField: UITextField!
+    @IBOutlet weak var resultView: UIView!
+    @IBOutlet weak var resultLabel: UILabel!
+
+
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +30,15 @@ class HomeController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func changeButton(_ sender: UIButton) {
+    }
 
+
+    @IBAction func backAction(_ sender: Any) {
+    }
+
+    @IBAction func textChanged(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
