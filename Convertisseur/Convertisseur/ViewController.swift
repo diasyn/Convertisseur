@@ -8,11 +8,19 @@
 
 import UIKit
 
+// on a besoin de constantes accessibles tout le long de ce controller
+let DEVISE = "devise"
+let TEMPERATURE = "température"
+let DISTANCE = "distance"
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var deviseView: UIView!
     @IBOutlet weak var distanceView: UIView!
     @IBOutlet weak var temperatureView: UIView!
+
+    let segueID = "ConvertSegue"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,9 +31,27 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBOutlet weak var buttonAction: UIButton!
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // on vérifie que l'identifiant de la segue correspond et que la destination de la segue soit bien du type de la classe du deuxième viewController
+        if segue.identifier == segueID {
+            if let vc = segue.destination as? ConvertController {
+                // si la destination est la bonne, on va pouvoir ajouter des paramètres propres au deuxième Controller (ConvertController)
+                vc.type = sender as? String
+            }
+        }
+    }
+
+    @IBAction func buttonAction(_ sender: UIButton) {
+        switch sender.tag {
+        case 0: performSegue(withIdentifier: segueID, sender: DEVISE)
+        case 1: performSegue(withIdentifier: segueID, sender: DISTANCE)
+        case 2: performSegue(withIdentifier: segueID, sender: TEMPERATURE)
+        default:
+            break
+        }
+    }
+
     /*
     // MARK: - Navigation
 
