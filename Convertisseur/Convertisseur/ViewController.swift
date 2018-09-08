@@ -14,22 +14,32 @@ let TEMPERATURE = "température"
 let DISTANCE = "distance"
 
 class ViewController: UIViewController {
-
+    // Ces valeurs d'Outlets ne sont créées qu'à partir du ViewDidload
     @IBOutlet weak var deviseView: UIView!
     @IBOutlet weak var distanceView: UIView!
     @IBOutlet weak var temperatureView: UIView!
 
     let segueID = "ConvertSegue"
 
+    // pour stocker les vues. On ne peut pas leur attribuer une valeur avant la création des Outlets. On ne les enregistre pas ici directement, mais dans ViewDidload, car c'est en lien avec le cycle de vie d'un UIViewController
+    var views:[UIView] = [] // création de la variable du tableau
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        views = [deviseView, distanceView, temperatureView] // remplissage du tableau ou par trois views.append(deviseView) successifs
+        // on appelle la fonction pour les angles
+        arrondirAngles()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func arrondirAngles() {
+        for view in views {
+            view.layer.cornerRadius = 10
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

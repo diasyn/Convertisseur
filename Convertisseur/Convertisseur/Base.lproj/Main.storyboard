@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.990147783251231"/>
+            <point key="canvasLocation" x="39" y="33"/>
         </scene>
         <!--Convert Controller-->
         <scene sceneID="8J3-0B-xfn">
@@ -312,12 +312,12 @@
                         <viewLayoutGuide key="safeArea" id="Yo9-Gq-A87"/>
                     </view>
                     <connections>
-                        <outlet property="dataTextField" destination="5g9-Qc-cQK" id="dMP-Ly-4Wq"/>
                         <outlet property="entryView" destination="K9x-JG-KNe" id="FdW-lV-ag7"/>
                         <outlet property="resultLabel" destination="ezy-Qi-V5n" id="p3B-UH-m69"/>
                         <outlet property="resultView" destination="eEZ-NP-iiT" id="IRK-hz-xUl"/>
                         <outlet property="titleLabel" destination="4NA-eH-rdu" id="9zX-75-Fno"/>
                         <outlet property="toDoLabel" destination="Z2i-ve-4Wc" id="PsT-Yz-6tn"/>
+                        <outlet property="toDoTextField" destination="5g9-Qc-cQK" id="dMP-Ly-4Wq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UlE-XA-anh" userLabel="First Responder" sceneMemberID="firstResponder"/>
